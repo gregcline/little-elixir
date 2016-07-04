@@ -1,5 +1,3 @@
-Code.load_file("toys.ex")
-
 ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
