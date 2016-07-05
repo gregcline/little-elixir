@@ -16,4 +16,7 @@ defmodule Toys do
 
   @spec eq?(atom, atom) :: boolean
   def eq?(x, y) when is_atom(x) and is_atom(y), do: x == y
+
+  @spec atom?(any) :: boolean
+  def atom?(x), do: is_atom(x)
 end

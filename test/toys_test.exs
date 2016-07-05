@@ -1,6 +1,3 @@
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
-
 defmodule ToysTest do
   use ExUnit.Case, async: true
 
@@ -55,6 +52,13 @@ defmodule ToysTest do
 
     test "errors on non-atoms" do
       catch_error Toys.eq?([])
+    end
+  end
+
+  describe "Toys.atom?/1" do
+    test "returns true if input an atom and false otherwise" do
+      assert Toys.atom?(:a)
+      refute Toys.atom?([])
     end
   end
 end
